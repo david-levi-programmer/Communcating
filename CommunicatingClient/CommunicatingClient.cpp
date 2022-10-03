@@ -7,8 +7,6 @@
 //host and port number
 IPaddress ip;
 
-TCPsocket listenSocket = nullptr;
-TCPsocket clientSocket = nullptr;
 
 const int port = 1234;
 
@@ -27,11 +25,14 @@ int main(int argc, char* argv[]) //Make a client solution and copy all this into
         system("pause");
         return 0;
     }
+    //===========client-specfic==========================
 
-    //====================================================
-    //client-specific
+    TCPsocket listenSocket = nullptr;
+    TCPsocket clientSocket = nullptr;
+    
     const std::string ipAddress = "localHost";
 
+    TCPsocket socket = nullptr;
 
     if (SDLNet_ResolveHost(&ip, ipAddress.c_str(), port) == -1);
     {
@@ -39,6 +40,17 @@ int main(int argc, char* argv[]) //Make a client solution and copy all this into
         system("pause");
         return 0;
     }
+
+    socket = SDLNet_TCP_Open(&ip);
+
+    if (!socket)
+    {
+        std::cout << "Could not connect" << std::endl;
+        system("pause");
+        return 0;
+    }
+
+    std::cout << "Connected to server" << std::endl;
 
     //====================================================
     SDLNet_Quit();
