@@ -21,10 +21,9 @@
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>
     <Keyword>Win32Proj</Keyword>
-    <ProjectGuid>{63243430-2001-400f-97e2-1422d05aa7ca}</ProjectGuid>
-    <RootNamespace>CommunicatingClient</RootNamespace>
+    <ProjectGuid>{f684dcb1-3921-4ec2-a4bb-3bfca3e8b969}</ProjectGuid>
+    <RootNamespace>ChatClient</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
-    <ProjectName>Chat Client</ProjectName>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
@@ -73,13 +72,13 @@
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <LinkIncremental>true</LinkIncremental>
-    <IncludePath>C:\Users\DAL0531\source\repos\Communcating\SDL\Include;D:\Visual Studio Work\repos\Communcating\SDL\include;$(IncludePath)</IncludePath>
-    <LibraryPath>C:\Users\DAL0531\source\repos\Communcating\SDL\lib;D:\Visual Studio Work\repos\Communcating\SDL\lib;$(LibraryPath)</LibraryPath>
+    <IncludePath>D:\Visual Studio Work\repos\Communcating\Chat Client\SDL\include;$(IncludePath)</IncludePath>
+    <LibraryPath>D:\Visual Studio Work\repos\Communcating\Chat Client\SDL\lib;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <LinkIncremental>false</LinkIncremental>
-    <IncludePath>C:\Users\DAL0531\source\repos\Communcating\SDL\Include;D:\Visual Studio Work\repos\Communcating\SDL\include;$(IncludePath)</IncludePath>
-    <LibraryPath>C:\Users\DAL0531\source\repos\Communcating\SDL\lib;D:\Visual Studio Work\repos\Communcating\SDL\lib;$(LibraryPath)</LibraryPath>
+    <IncludePath>D:\Visual Studio Work\repos\Communcating\Chat Client\SDL\include;$(IncludePath)</IncludePath>
+    <LibraryPath>D:\Visual Studio Work\repos\Communcating\Chat Client\SDL\lib;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <LinkIncremental>true</LinkIncremental>
@@ -146,7 +145,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="CommunicatingClient.cpp" />
+    <ClCompile Include="Chat Client.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

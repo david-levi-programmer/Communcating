@@ -7,10 +7,9 @@
 //host and port number
 IPaddress ip;
 
-
 const int port = 1234;
 
-int main(int argc, char* argv[]) //Make a client solution and copy all this into it
+int main(int argc, char* argv[])
 {
     if (SDL_Init(SDL_INIT_EVERYTHING) == -1)
     {
@@ -29,7 +28,7 @@ int main(int argc, char* argv[]) //Make a client solution and copy all this into
 
     TCPsocket listenSocket = nullptr;
     TCPsocket clientSocket = nullptr;
-    
+
     const std::string ipAddress = "localHost";
 
     TCPsocket socket = nullptr;

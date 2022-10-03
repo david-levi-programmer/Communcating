@@ -3,9 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.31515.178
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Communcating Server", "Communcating\Communcating.vcxproj", "{117357A6-5374-4B67-ACB9-9E83178E5CE9}"
-EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "CommunicatingClient", "CommunicatingClient\CommunicatingClient.vcxproj", "{63243430-2001-400F-97E2-1422D05AA7CA}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Chat Server", "Communcating\Communcating.vcxproj", "{117357A6-5374-4B67-ACB9-9E83178E5CE9}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -23,14 +21,6 @@ Global
 		{117357A6-5374-4B67-ACB9-9E83178E5CE9}.Release|x64.Build.0 = Release|x64
 		{117357A6-5374-4B67-ACB9-9E83178E5CE9}.Release|x86.ActiveCfg = Release|Win32
 		{117357A6-5374-4B67-ACB9-9E83178E5CE9}.Release|x86.Build.0 = Release|Win32
-		{63243430-2001-400F-97E2-1422D05AA7CA}.Debug|x64.ActiveCfg = Debug|x64
-		{63243430-2001-400F-97E2-1422D05AA7CA}.Debug|x64.Build.0 = Debug|x64
-		{63243430-2001-400F-97E2-1422D05AA7CA}.Debug|x86.ActiveCfg = Debug|Win32
-		{63243430-2001-400F-97E2-1422D05AA7CA}.Debug|x86.Build.0 = Debug|Win32
-		{63243430-2001-400F-97E2-1422D05AA7CA}.Release|x64.ActiveCfg = Release|x64
-		{63243430-2001-400F-97E2-1422D05AA7CA}.Release|x64.Build.0 = Release|x64
-		{63243430-2001-400F-97E2-1422D05AA7CA}.Release|x86.ActiveCfg = Release|Win32
-		{63243430-2001-400F-97E2-1422D05AA7CA}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
