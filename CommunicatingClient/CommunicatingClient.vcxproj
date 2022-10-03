@@ -73,13 +73,13 @@
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <LinkIncremental>true</LinkIncremental>
-    <IncludePath>C:\Users\DAL0531\source\repos\Communcating\SDL\Include;$(IncludePath)</IncludePath>
-    <LibraryPath>C:\Users\DAL0531\source\repos\Communcating\SDL\lib;$(LibraryPath)</LibraryPath>
+    <IncludePath>C:\Users\DAL0531\source\repos\Communcating\SDL\Include;D:\Visual Studio Work\repos\Communcating\SDL\include;$(IncludePath)</IncludePath>
+    <LibraryPath>C:\Users\DAL0531\source\repos\Communcating\SDL\lib;D:\Visual Studio Work\repos\Communcating\SDL\lib;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <LinkIncremental>false</LinkIncremental>
-    <IncludePath>C:\Users\DAL0531\source\repos\Communcating\SDL\Include;$(IncludePath)</IncludePath>
-    <LibraryPath>C:\Users\DAL0531\source\repos\Communcating\SDL\lib;$(LibraryPath)</LibraryPath>
+    <IncludePath>C:\Users\DAL0531\source\repos\Communcating\SDL\Include;D:\Visual Studio Work\repos\Communcating\SDL\include;$(IncludePath)</IncludePath>
+    <LibraryPath>C:\Users\DAL0531\source\repos\Communcating\SDL\lib;D:\Visual Studio Work\repos\Communcating\SDL\lib;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <LinkIncremental>true</LinkIncremental>
