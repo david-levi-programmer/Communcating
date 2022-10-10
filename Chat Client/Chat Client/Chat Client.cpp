@@ -18,7 +18,7 @@ int main(int argc, char* argv[])
         return 0;
     }
 
-    else if (SDLNet_Init() == -1);
+    else if (SDLNet_Init() == -1)
     {
         std::cout << "Networking sub-system did not initialize properly." << std::endl;
         system("pause");
@@ -33,7 +33,7 @@ int main(int argc, char* argv[])
 
     TCPsocket socket = nullptr;
 
-    if (SDLNet_ResolveHost(&ip, ipAddress.c_str(), port) == -1);
+    if (SDLNet_ResolveHost(&ip, ipAddress.c_str(), port) == -1)
     {
         std::cout << "Could establish connection to server" << std::endl;
         system("pause");

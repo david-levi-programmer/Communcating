@@ -21,8 +21,8 @@
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>
     <Keyword>Win32Proj</Keyword>
-    <ProjectGuid>{84bc2f46-3f61-4cb4-86ab-60a4fe49256b}</ProjectGuid>
-    <RootNamespace>ChatClient</RootNamespace>
+    <ProjectGuid>{f2597601-6108-491b-a251-72615120387d}</ProjectGuid>
+    <RootNamespace>ChatServer</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
@@ -72,23 +72,23 @@
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <LinkIncremental>true</LinkIncremental>
-    <IncludePath>C:\Users\DAL0531\source\repos\Communcating\Chat Client\SDL\Include;$(IncludePath)</IncludePath>
-    <LibraryPath>C:\Users\DAL0531\source\repos\Communcating\Chat Client\SDL\lib;$(LibraryPath)</LibraryPath>
+    <IncludePath>C:\Users\DAL0531\source\repos\Communcating\Chat Server\SDL\Include;$(IncludePath)</IncludePath>
+    <LibraryPath>C:\Users\DAL0531\source\repos\Communcating\Chat Server\SDL\lib;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <LinkIncremental>false</LinkIncremental>
-    <IncludePath>C:\Users\DAL0531\source\repos\Communcating\Chat Client\SDL\Include;$(IncludePath)</IncludePath>
-    <LibraryPath>C:\Users\DAL0531\source\repos\Communcating\Chat Client\SDL\lib;$(LibraryPath)</LibraryPath>
+    <IncludePath>C:\Users\DAL0531\source\repos\Communcating\Chat Server\SDL\Include;$(IncludePath)</IncludePath>
+    <LibraryPath>C:\Users\DAL0531\source\repos\Communcating\Chat Server\SDL\lib;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <LinkIncremental>true</LinkIncremental>
-    <IncludePath>C:\Users\DAL0531\source\repos\Communcating\Chat Client\SDL\Include;$(IncludePath)</IncludePath>
-    <LibraryPath>C:\Users\DAL0531\source\repos\Communcating\Chat Client\SDL\lib;$(LibraryPath)</LibraryPath>
+    <IncludePath>C:\Users\DAL0531\source\repos\Communcating\Chat Server\SDL\Include;$(IncludePath)</IncludePath>
+    <LibraryPath>C:\Users\DAL0531\source\repos\Communcating\Chat Server\SDL\lib;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <LinkIncremental>false</LinkIncremental>
-    <IncludePath>C:\Users\DAL0531\source\repos\Communcating\Chat Client\SDL\Include;$(IncludePath)</IncludePath>
-    <LibraryPath>C:\Users\DAL0531\source\repos\Communcating\Chat Client\SDL\lib;$(LibraryPath)</LibraryPath>
+    <IncludePath>C:\Users\DAL0531\source\repos\Communcating\Chat Server\SDL\Include;$(IncludePath)</IncludePath>
+    <LibraryPath>C:\Users\DAL0531\source\repos\Communcating\Chat Server\SDL\lib;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
@@ -151,7 +151,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="Chat Client.cpp" />
+    <ClCompile Include="Chat Server.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
