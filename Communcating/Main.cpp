@@ -18,7 +18,7 @@ int main(int argc, char* argv[])
         return 0;
     }
 
-    else if (SDLNet_Init() == -1);
+    else if (SDLNet_Init() == -1)
     {
         std::cout << "Networking sub-system did not initialize properly." << std::endl;
         system("pause");
@@ -31,7 +31,7 @@ int main(int argc, char* argv[])
     
     //setup with specific port number
     //as host, we use nullptr
-    if (SDLNet_ResolveHost(&ip, nullptr, port) == -1);
+    if (SDLNet_ResolveHost(&ip, nullptr, port) == -1)
     {
         std::cout << "Could not create server" << std::endl;
         system("pause");
