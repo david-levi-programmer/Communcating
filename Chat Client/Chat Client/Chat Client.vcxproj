@@ -152,6 +152,10 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="Chat Client.cpp" />
+    <ClCompile Include="Connection.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Connection.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
