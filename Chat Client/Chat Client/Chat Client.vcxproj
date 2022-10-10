@@ -72,13 +72,13 @@
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <LinkIncremental>true</LinkIncremental>
-    <IncludePath>C:\Users\DAL0531\source\repos\Communcating\Chat Client\SDL\Include;$(IncludePath)</IncludePath>
-    <LibraryPath>C:\Users\DAL0531\source\repos\Communcating\Chat Client\SDL\lib;$(LibraryPath)</LibraryPath>
+    <IncludePath>D:\Visual Studio Work\repos\Communcating\Chat Client\SDL\include;$(IncludePath)</IncludePath>
+    <LibraryPath>D:\Visual Studio Work\repos\Communcating\Chat Client\SDL\lib;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <LinkIncremental>false</LinkIncremental>
-    <IncludePath>C:\Users\DAL0531\source\repos\Communcating\Chat Client\SDL\Include;$(IncludePath)</IncludePath>
-    <LibraryPath>C:\Users\DAL0531\source\repos\Communcating\Chat Client\SDL\lib;$(LibraryPath)</LibraryPath>
+    <IncludePath>D:\Visual Studio Work\repos\Communcating\Chat Client\SDL\include;$(IncludePath)</IncludePath>
+    <LibraryPath>D:\Visual Studio Work\repos\Communcating\Chat Client\SDL\lib;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <LinkIncremental>true</LinkIncremental>
