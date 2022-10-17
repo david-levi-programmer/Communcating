@@ -4,6 +4,7 @@
 #include <SDL.h>
 #include <SDL_net.h>
 #include "Connection.h"
+
 #define CHAT_PROMPT "/"
 
 #define MAX_SOCKETS 0x10
@@ -17,8 +18,8 @@ int main(int argc, char* argv[])
     std::thread door(&Connection::ListenSocket, Connection());
     door.detach();
     
-    std::thread talk(&Connection::Send, Connection());
-    std::thread hear(&Connection::Receive, Connection());
+    //std::thread talk(&Connection::Send, Connection());
+    //std::thread hear(&Connection::Receive, Connection());
 
     server.CloseSocket();
     system("pause");
