@@ -21,9 +21,9 @@ int main(int argc, char* argv[])
     //std::thread talk(&Connection::Send, Connection());
     //std::thread hear(&Connection::Receive, Connection());
 
-    server.CloseSocket();
     system("pause");
     return 0;
     
+    server.CloseSocket();
     server.ShutDown();
 }
