@@ -1,5 +1,6 @@
 #include <iostream>
 #include <string>
+#include <thread>
 #include <SDL.h>
 #include <SDL_net.h>
 #include "Connection.h"
@@ -17,7 +18,8 @@ int main(int argc, char* argv[])
 
     while (messageSent != "end" && messageReceived != "end")
     {
-        client.Receive(messageReceived);
+        std::thread talk(&Connection::Send, Connection(), messageSent);
+        std::thread hear(&Connection::Receive, Connection(), messageReceived);
     }
 
     system("pause");

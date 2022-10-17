@@ -47,17 +47,18 @@ bool Connection::OpenSocket()
     std::cout << "Connected to server" << std::endl;
 }
 
-void Connection::ListenSocket()
-{
-}
-
 bool Connection::Send(const std::string& message)
 {
+    std::string messageSent;
+    std::cin >> messageSent;
+    int length = messageSent.length() + 1;
+    
     return true;
 }
 
 bool Connection::Receive(std::string& message)
 {
+    //std::getline >> message >> std::endl;
     return true;
 }
 

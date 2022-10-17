@@ -1,5 +1,6 @@
 #include <iostream>
 #include <string>
+#include <thread>
 #include <SDL.h>
 #include <SDL_net.h>
 #include "Connection.h"
@@ -16,17 +17,17 @@ int main(int argc, char* argv[])
 {
     server.Initaialize();
     server.OpenSocket();
-    server.ListenSocket();
+    std::thread door(&Connection::ListenSocket, Connection());
     
     while (messageSent != "end" && messageReceived != "end")
     {
-        std::cout << "Enter your message: ";
-        std::cin >> messageSent;
-        server.Send(messageSent);
+        std::thread talk(&Connection::Send, Connection());
+        std::thread hear(&Connection::Receive, Connection());
     }
 
     system("pause");
     return 0;
 
+    server.CloseSocket();
     server.ShutDown();
 }

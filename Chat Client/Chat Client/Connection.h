@@ -12,7 +12,7 @@ public:
 
 	bool Initaialize();
 	bool OpenSocket();
-	void ListenSocket();
+	void ListenSocket() {}
 
 	bool Send(const std::string& message);
 	bool Receive(std::string& message);

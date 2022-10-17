@@ -62,12 +62,12 @@ void Connection::ListenSocket()
         SDL_Delay(500);
     }
     
-    SDLNet_TCP_Close(listenSocket); //realistically, you would be waiting for more connections
     std::cout << std::endl << "Client connected" << std::endl << std::endl;
 }
 
 bool Connection::Send(const std::string& message)
 {
+    std::cout << "Enter your message: ";
     std::cout << "Message sent" << std::endl;
     return true;
 }
@@ -79,7 +79,7 @@ bool Connection::Receive(std::string& message)
 
 void Connection::CloseSocket()
 {
-
+    SDLNet_TCP_Close(listenSocket);
 }
 
 void Connection::ShutDown()
