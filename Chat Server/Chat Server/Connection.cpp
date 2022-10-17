@@ -67,19 +67,33 @@ void Connection::ListenSocket()
 
 bool Connection::Send(const std::string& message)
 {
-    std::cout << "Enter your message: ";
-    std::cout << "Message sent" << std::endl;
-    return true;
+    std::string messageSent;
+    std::cin >> messageSent;
+    int length = messageSent.length() + 1;
+    if (SDLNet_TCP_Send(m_socket, messageSent.c_str(), length) < length)
+    {
+        std::cout << "Couldn't send message" << std::endl;
+    }
+    std::cout << "Message sent." << std::endl;
+    while (messageSent != "end")
+    {
+        return true;
+    }
 }
 
 bool Connection::Receive(std::string& message)
 {
-    return true;
+    std::string messageReceived;
+    while (messageReceived != "end")
+    {
+        return true;
+    }
 }
 
 void Connection::CloseSocket()
 {
     SDLNet_TCP_Close(listenSocket);
+    std::cout << "Connection closed." << std::endl;
 }
 
 void Connection::ShutDown()

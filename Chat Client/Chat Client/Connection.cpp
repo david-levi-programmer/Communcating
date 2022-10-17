@@ -52,14 +52,25 @@ bool Connection::Send(const std::string& message)
     std::string messageSent;
     std::cin >> messageSent;
     int length = messageSent.length() + 1;
-    
-    return true;
+    if (SDLNet_TCP_Send(m_socket, messageSent.c_str(), length) < length)
+    {
+        std::cout << "Couldn't send message" << std::endl;
+    }
+    std::cout << "Message sent." << std::endl;
+    while (messageSent != "end")
+    {
+        return true;
+    }
 }
 
 bool Connection::Receive(std::string& message)
 {
+    std::string messageReceived;
     //std::getline >> message >> std::endl;
-    return true;
+    while (messageReceived != "end")
+    {
+        return true;
+    }
 }
 
 void Connection::CloseSocket()

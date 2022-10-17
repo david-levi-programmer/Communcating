@@ -8,20 +8,15 @@
 
 Connection client;
 
-std::string messageSent;
-std::string messageReceived;
-
 int main(int argc, char* argv[])
 {
     client.Initaialize();
     client.OpenSocket();
 
-    while (messageSent != "end" && messageReceived != "end")
-    {
-        std::thread talk(&Connection::Send, Connection(), messageSent);
-        std::thread hear(&Connection::Receive, Connection(), messageReceived);
-    }
+    std::thread talk(&Connection::Send, Connection());
+    std::thread hear(&Connection::Receive, Connection());
 
+    //client.CloseSocket();
     system("pause");
     return 0;
     
