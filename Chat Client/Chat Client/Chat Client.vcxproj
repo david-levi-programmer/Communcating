@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup Label="ProjectConfigurations">
     <ProjectConfiguration Include="Debug|Win32">
@@ -72,8 +72,8 @@
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <LinkIncremental>true</LinkIncremental>
-    <IncludePath>C:\Users\DAL0531\source\repos\Communcating\Chat Client\SDL\Include;C:\Users\DAL0531\Documents\Visual Studio 2019\Communcating\Chat Client\SDL\include</IncludePath>
-    <LibraryPath>C:\Users\DAL0531\source\repos\Communcating\Chat Client\SDL\lib;C:\Users\DAL0531\Documents\Visual Studio 2019\Communcating\Chat Client\SDL\lib</LibraryPath>
+    <IncludePath>C:\Users\DAL0531\source\repos\Communcating\Chat Client\SDL\Include;C:\Users\DAL0531\Documents\Visual Studio 2019\Communcating\Chat Client\SDL\include;C:\Users\david\OneDrive\Desktop\School Work\Visual Studio Work\Communcating\Chat Client\SDL\include</IncludePath>
+    <LibraryPath>C:\Users\DAL0531\source\repos\Communcating\Chat Client\SDL\lib;C:\Users\DAL0531\Documents\Visual Studio 2019\Communcating\Chat Client\SDL\lib;C:\Users\david\OneDrive\Desktop\School Work\Visual Studio Work\Communcating\Chat Client\SDL\lib</LibraryPath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <LinkIncremental>false</LinkIncremental>
@@ -101,6 +101,7 @@
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <AdditionalDependencies>SDL2.lib;SDL2main.lib;SDL2_net.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>C:\Program Files %28x86%29\Windows Kits\10\Lib\10.0.19041.0\um\x86;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
@@ -118,6 +119,7 @@
       <OptimizeReferences>true</OptimizeReferences>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <AdditionalDependencies>SDL2.lib;SDL2main.lib;SDL2_net.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>C:\Program Files %28x86%29\Windows Kits\10\Lib\10.0.19041.0\um\x86;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
