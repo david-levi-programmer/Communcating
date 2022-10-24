@@ -72,23 +72,23 @@
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <LinkIncremental>true</LinkIncremental>
-    <IncludePath>C:\Users\DAL0531\Documents\Visual Studio 2019\Communcating\Chat Client\SDL\include;C:\Users\david\OneDrive\Desktop\School Work\Visual Studio Work\Communcating\Chat Client\SDL\include;$(IncludePath)</IncludePath>
-    <LibraryPath>C:\Users\DAL0531\Documents\Visual Studio 2019\Communcating\Chat Client\SDL\lib;C:\Users\david\OneDrive\Desktop\School Work\Visual Studio Work\Communcating\Chat Client\SDL\lib;$(LibraryPath)</LibraryPath>
+    <IncludePath>C:\Users\DAL0531\source\repos\Communcating\Chat Client\SDL\Include</IncludePath>
+    <LibraryPath>C:\Users\DAL0531\source\repos\Communcating\Chat Client\SDL\lib</LibraryPath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <LinkIncremental>false</LinkIncremental>
-    <IncludePath>C:\Users\DAL0531\Documents\Visual Studio 2019\Communcating\Chat Client\SDL\include;C:\Users\david\OneDrive\Desktop\School Work\Visual Studio Work\Communcating\Chat Client\SDL\include;$(IncludePath)</IncludePath>
-    <LibraryPath>C:\Users\DAL0531\Documents\Visual Studio 2019\Communcating\Chat Client\SDL\lib;C:\Users\david\OneDrive\Desktop\School Work\Visual Studio Work\Communcating\Chat Client\SDL\lib;$(LibraryPath)</LibraryPath>
+    <IncludePath>C:\Users\DAL0531\source\repos\Communcating\Chat Client\SDL\Include</IncludePath>
+    <LibraryPath>C:\Users\DAL0531\source\repos\Communcating\Chat Client\SDL\lib</LibraryPath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <LinkIncremental>true</LinkIncremental>
-    <IncludePath>C:\Users\DAL0531\source\repos\Communcating\Chat Client\SDL\Include;$(IncludePath)</IncludePath>
-    <LibraryPath>C:\Users\DAL0531\source\repos\Communcating\Chat Client\SDL\lib;$(LibraryPath)</LibraryPath>
+    <IncludePath>C:\Users\DAL0531\source\repos\Communcating\Chat Client\SDL\Include</IncludePath>
+    <LibraryPath>C:\Users\DAL0531\source\repos\Communcating\Chat Client\SDL\lib</LibraryPath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <LinkIncremental>false</LinkIncremental>
-    <IncludePath>C:\Users\DAL0531\source\repos\Communcating\Chat Client\SDL\Include;$(IncludePath)</IncludePath>
-    <LibraryPath>C:\Users\DAL0531\source\repos\Communcating\Chat Client\SDL\lib;$(LibraryPath)</LibraryPath>
+    <IncludePath>C:\Users\DAL0531\source\repos\Communcating\Chat Client\SDL\Include</IncludePath>
+    <LibraryPath>C:\Users\DAL0531\source\repos\Communcating\Chat Client\SDL\lib</LibraryPath>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
@@ -100,7 +100,7 @@
     <Link>
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalDependencies>SDL2.lib;SDL2main.lib;SDL2_net.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>SDL2.lib;SDL2main.lib;SDL2_net.lib</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
@@ -117,7 +117,7 @@
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <OptimizeReferences>true</OptimizeReferences>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalDependencies>SDL2.lib;SDL2main.lib;SDL2_net.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>SDL2.lib;SDL2main.lib;SDL2_net.lib</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
@@ -130,7 +130,7 @@
     <Link>
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalDependencies>SDL2.lib;SDL2main.lib;SDL2_net.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>SDL2.lib;SDL2main.lib;SDL2_net.lib</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
@@ -147,7 +147,7 @@
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <OptimizeReferences>true</OptimizeReferences>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalDependencies>SDL2.lib;SDL2main.lib;SDL2_net.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>SDL2.lib;SDL2main.lib;SDL2_net.lib</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>

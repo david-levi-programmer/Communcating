@@ -72,23 +72,23 @@
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <LinkIncremental>true</LinkIncremental>
-    <IncludePath>C:\Users\DAL0531\Documents\Visual Studio 2019\Communcating\Chat Server\SDL\Include;C:\Users\david\OneDrive\Desktop\School Work\Visual Studio Work\Communcating\Chat Server\SDL\Include;$(IncludePath)</IncludePath>
-    <LibraryPath>C:\Users\DAL0531\Documents\Visual Studio 2019\Communcating\Chat Server\SDL\lib;C:\Users\david\OneDrive\Desktop\School Work\Visual Studio Work\Communcating\Chat Server\SDL\lib;$(LibraryPath)</LibraryPath>
+    <IncludePath>C:\Users\DAL0531\source\repos\Communcating\Chat Server\SDL\Include</IncludePath>
+    <LibraryPath>C:\Users\DAL0531\source\repos\Communcating\Chat Server\SDL\lib</LibraryPath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <LinkIncremental>false</LinkIncremental>
-    <IncludePath>C:\Users\DAL0531\Documents\Visual Studio 2019\Communcating\Chat Server\SDL\Include;C:\Users\david\OneDrive\Desktop\School Work\Visual Studio Work\Communcating\Chat Server\SDL\Include;$(IncludePath)</IncludePath>
-    <LibraryPath>C:\Users\DAL0531\Documents\Visual Studio 2019\Communcating\Chat Server\SDL\lib;C:\Users\david\OneDrive\Desktop\School Work\Visual Studio Work\Communcating\Chat Server\SDL\lib;$(LibraryPath)</LibraryPath>
+    <IncludePath>C:\Users\DAL0531\source\repos\Communcating\Chat Server\SDL\Include</IncludePath>
+    <LibraryPath>C:\Users\DAL0531\source\repos\Communcating\Chat Server\SDL\lib</LibraryPath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <LinkIncremental>true</LinkIncremental>
-    <IncludePath>C:\Users\DAL0531\source\repos\Communcating\Chat Server\SDL\Include;$(IncludePath)</IncludePath>
-    <LibraryPath>C:\Users\DAL0531\source\repos\Communcating\Chat Server\SDL\lib;$(LibraryPath)</LibraryPath>
+    <IncludePath>C:\Users\DAL0531\source\repos\Communcating\Chat Server\SDL\Include</IncludePath>
+    <LibraryPath>C:\Users\DAL0531\source\repos\Communcating\Chat Server\SDL\lib</LibraryPath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <LinkIncremental>false</LinkIncremental>
-    <IncludePath>C:\Users\DAL0531\source\repos\Communcating\Chat Server\SDL\Include;$(IncludePath)</IncludePath>
-    <LibraryPath>C:\Users\DAL0531\source\repos\Communcating\Chat Server\SDL\lib;$(LibraryPath)</LibraryPath>
+    <IncludePath>C:\Users\DAL0531\source\repos\Communcating\Chat Server\SDL\Include</IncludePath>
+    <LibraryPath>C:\Users\DAL0531\source\repos\Communcating\Chat Server\SDL\lib</LibraryPath>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
