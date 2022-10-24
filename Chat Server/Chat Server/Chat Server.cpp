@@ -20,7 +20,7 @@ int main(int argc, char* argv[])
     std::thread door(&Connection::ListenSocket, Connection());
     door.join();
     
-    std::thread talk(&Connection::Send, Connection());
+    //std::thread talk(&Connection::Send, Connection());
     //std::thread hear(&Connection::Receive, Connection());
     
     system("pause");
