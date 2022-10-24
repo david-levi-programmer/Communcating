@@ -65,7 +65,7 @@ void Connection::ListenSocket()
     std::cout << std::endl << "Client connected" << std::endl << std::endl;
 }
 
-bool Connection::Send(/*const std::string& message*/)
+bool Connection::Send(const std::string& message)
 {
     std::string messageSent;
     std::cin >> messageSent;
