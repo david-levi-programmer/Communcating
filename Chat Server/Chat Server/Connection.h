@@ -5,6 +5,8 @@
 
 #pragma once
 
+constexpr int MAX_CLIENTS = 4;
+
 class Connection
 {
 
@@ -14,7 +16,7 @@ public:
 	bool OpenSocket();
 	bool ListenSocket();
 
-	bool Send(/*const std::string& message*/);
+	bool Send(/*const std::string& messageSent*/);
 	bool Receive(std::string& message);
 
 	void CloseSocket();
@@ -26,7 +28,6 @@ private:
 	TCPsocket m_listenSocket;
 	TCPsocket m_clientSocket;
 	int m_totalClients;
-	int MAX_CLIENTS;
 
 	//std::string& messageSent;
 	//std::string& messageReceived;

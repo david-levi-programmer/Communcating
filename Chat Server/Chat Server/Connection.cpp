@@ -81,6 +81,7 @@ bool Connection::ListenSocket()
             //otherwise store the connection for later
             m_clientSocket = tempSocket;
             std::cout << std::endl << "Client connected" << std::endl << std::endl;
+            m_totalClients++;
         }
 
     }

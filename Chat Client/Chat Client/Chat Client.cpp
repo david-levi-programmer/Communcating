@@ -16,7 +16,7 @@ int main(int argc, char* argv[])
     client.Initaialize();
     client.OpenSocket();
 
-    //std::thread talk(&Connection::Send, Connection());
+    std::thread talk(&Connection::Send, Connection());
     //std::thread hear(&Connection::Receive, Connection());
 
     system("pause");
