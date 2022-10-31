@@ -75,6 +75,7 @@ bool Connection::Receive(std::string& message)
 
 void Connection::CloseSocket()
 {
+
 }
 
 void Connection::ShutDown()

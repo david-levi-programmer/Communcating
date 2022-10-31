@@ -12,7 +12,7 @@ public:
 
 	bool Initaialize();
 	bool OpenSocket();
-	void ListenSocket();
+	bool ListenSocket();
 
 	bool Send(/*const std::string& message*/);
 	bool Receive(std::string& message);
@@ -23,7 +23,10 @@ public:
 private:
 
 	IPaddress m_IP;
-	TCPsocket m_socket;
+	TCPsocket m_listenSocket;
+	TCPsocket m_clientSocket;
+	int m_totalClients;
+	int MAX_CLIENTS;
 
 	//std::string& messageSent;
 	//std::string& messageReceived;

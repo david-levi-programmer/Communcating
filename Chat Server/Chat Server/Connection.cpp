@@ -2,9 +2,6 @@
 #include <iostream>
 #include <string>
 
-TCPsocket listenSocket = nullptr;
-TCPsocket clientSocket = nullptr;
-
 //go into command prompt and type 'ipconfig' to see your address
 //host and port number
 const int port = 1234;
@@ -33,14 +30,24 @@ bool Connection::Initaialize()
         system("pause");
         return 0;
     }
+
+    /*while (m_totalClients < MAX_CLIENTS)
+    {
+        while (!ListenSocket())
+        {
+            std::cout << "Waiting for clients..." << std::endl;
+        }
+
+        m_totalClients++;
+    }*/
 }
 
 bool Connection::OpenSocket()
 {
     //if server created above, open listen socket
-    listenSocket = SDLNet_TCP_Open(&m_IP);
+    m_listenSocket = SDLNet_TCP_Open(&m_IP);
 
-    if (!listenSocket)
+    if (!m_listenSocket)
     {
         std::cout << "Could not open listening socket" << std::endl << std::endl;
         system("pause");
@@ -51,18 +58,31 @@ bool Connection::OpenSocket()
     std::cout << "Waiting for client." << std::endl;
 }
 
-void Connection::ListenSocket()
+bool Connection::ListenSocket()
 {
-    //listen for client with small delay so that CPU isn't overworked
-    //when connection made, save it in new socket and remove old one
-    while (!clientSocket)
+    while (m_totalClients < MAX_CLIENTS)
     {
-        clientSocket = SDLNet_TCP_Accept(listenSocket);
-        std::cout << ".";
-        SDL_Delay(500);
-    }
+        TCPsocket tempSocket = nullptr;
     
-    std::cout << std::endl << "Client connected" << std::endl << std::endl;
+        //when connection made, save it in new socket
+        tempSocket = SDLNet_TCP_Accept(m_listenSocket);
+        
+        //if there's no client, pause for a bit then try again
+        if (!tempSocket)
+        {
+            std::cout << "Waiting for clients...";
+            SDL_Delay(500);
+        }
+        
+        else
+        {
+            //otherwise store the connection for later
+            m_clientSocket = tempSocket;
+            std::cout << std::endl << "Client connected" << std::endl << std::endl;
+        }
+
+        return true;
+    }
 }
 
 bool Connection::Send(/*const std::string& message*/)
@@ -70,7 +90,7 @@ bool Connection::Send(/*const std::string& message*/)
     std::string messageSent;
     std::cin >> messageSent;
     int length = messageSent.length() + 1;
-    if (SDLNet_TCP_Send(m_socket, messageSent.c_str(), length) < length)
+    if (SDLNet_TCP_Send(m_clientSocket, messageSent.c_str(), length) < length)
     {
         std::cout << "Couldn't send message" << std::endl;
     }
@@ -92,7 +112,7 @@ bool Connection::Receive(std::string& message)
 
 void Connection::CloseSocket()
 {
-    SDLNet_TCP_Close(listenSocket);
+    SDLNet_TCP_Close(m_listenSocket);
     std::cout << "Connection closed." << std::endl;
 }
 
