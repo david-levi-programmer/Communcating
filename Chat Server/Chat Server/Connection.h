@@ -16,7 +16,7 @@ public:
 	bool OpenSocket();
 	bool ListenSocket();
 
-	bool Send(/*const std::string& messageSent*/);
+	bool Send(/*std::string& messageSent*/);
 	bool Receive(std::string& message);
 
 	void CloseSocket();

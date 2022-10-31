@@ -11,7 +11,7 @@
 
 Connection server;
 
-//std::string messageSent;
+std::string messageSent;
 
 int main(int argc, char* argv[])
 {
@@ -20,7 +20,7 @@ int main(int argc, char* argv[])
     std::thread door(&Connection::ListenSocket, Connection());
     door.join();
     
-    std::thread talk(&Connection::Send, Connection());
+    std::thread talk(&Connection::Send, Connection()/*, std::ref(messageSent)*/);
     //std::thread hear(&Connection::Receive, Connection());
     
     system("pause");

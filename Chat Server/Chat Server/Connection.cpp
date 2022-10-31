@@ -88,16 +88,20 @@ bool Connection::ListenSocket()
     return true;
 }
 
-bool Connection::Send(/*const std::string& message*/)
+bool Connection::Send(/*std::string& messageSent*/)
 {
     std::string messageSent;
+    std::cout << "Say something: ";
     std::cin >> messageSent;
+    //int length = messageSent.length();
     int length = messageSent.length() + 1;
     if (SDLNet_TCP_Send(m_clientSocket, messageSent.c_str(), length) < length)
     {
         std::cout << "Couldn't send message" << std::endl;
     }
+
     std::cout << "Message sent." << std::endl;
+    
     while (messageSent != "end")
     {
         return true;
