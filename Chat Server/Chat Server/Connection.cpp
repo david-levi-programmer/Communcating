@@ -12,14 +12,14 @@ bool Connection::Initaialize()
     {
         std::cout << "SDL did not initialize properly." << std::endl;
         system("pause");
-        return 0;
+        return false;
     }
 
     else if (SDLNet_Init() == -1)
     {
         std::cout << "Networking sub-system did not initialize properly." << std::endl;
         system("pause");
-        return 0;
+        return false;
     }
 
     //setup with specific port number
@@ -28,7 +28,7 @@ bool Connection::Initaialize()
     {
         std::cout << "Could not create server" << std::endl;
         system("pause");
-        return 0;
+        return false;
     }
 
     /*while (m_totalClients < MAX_CLIENTS)
@@ -40,6 +40,7 @@ bool Connection::Initaialize()
 
         m_totalClients++;
     }*/
+    return true;
 }
 
 bool Connection::OpenSocket()
@@ -51,11 +52,12 @@ bool Connection::OpenSocket()
     {
         std::cout << "Could not open listening socket" << std::endl << std::endl;
         system("pause");
-        return 0;
+        return false;
     }
 
     std::cout << "Socket open for clients." << std::endl << std::endl;
     std::cout << "Waiting for client." << std::endl;
+    return true;
 }
 
 bool Connection::ListenSocket()
@@ -81,8 +83,8 @@ bool Connection::ListenSocket()
             std::cout << std::endl << "Client connected" << std::endl << std::endl;
         }
 
-        return true;
     }
+    return true;
 }
 
 bool Connection::Send(/*const std::string& message*/)
@@ -99,6 +101,8 @@ bool Connection::Send(/*const std::string& message*/)
     {
         return true;
     }
+
+    return false;
 }
 
 bool Connection::Receive(std::string& message)
@@ -108,6 +112,7 @@ bool Connection::Receive(std::string& message)
     {
         return true;
     }
+    return false;
 }
 
 void Connection::CloseSocket()

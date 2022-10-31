@@ -72,8 +72,8 @@
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <LinkIncremental>true</LinkIncremental>
-    <IncludePath>C:\Users\DAL0531\source\repos\Communcating\Chat Server\SDL\Include;C:\Users\DAL0531\Documents\Visual Studio 2019\Communcating\Chat Server\SDL\Include;C:\Users\david\OneDrive\Desktop\School Work\Visual Studio Work\Communcating\Chat Server\SDL\Include</IncludePath>
-    <LibraryPath>C:\Users\DAL0531\source\repos\Communcating\Chat Server\SDL\lib;C:\Users\DAL0531\Documents\Visual Studio 2019\Communcating\Chat Server\SDL\lib;C:\Users\david\OneDrive\Desktop\School Work\Visual Studio Work\Communcating\Chat Server\SDL\lib</LibraryPath>
+    <IncludePath>..\SDL\Include;$(IncludePath);</IncludePath>
+    <LibraryPath>..\SDL\lib;$(LibraryPath);</LibraryPath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <LinkIncremental>false</LinkIncremental>
@@ -96,6 +96,7 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
+      <LanguageStandard>stdcpp20</LanguageStandard>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
