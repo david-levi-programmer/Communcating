@@ -13,7 +13,7 @@ public:
 	bool Initaialize();
 	bool OpenSocket();
 
-	bool Send(const std::string& message);
+	bool Send(std::string& message);
 	bool Receive(std::string& message);
 
 	void CloseSocket();
@@ -23,8 +23,5 @@ private:
 
 	IPaddress m_IP;
 	TCPsocket m_socket = nullptr;
-	/*TCPsocket m_listenSocket;
-	TCPsocket m_clientSocket;
-	int m_totalSockets;*/
 
 };

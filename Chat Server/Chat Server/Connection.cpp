@@ -31,15 +31,6 @@ bool Connection::Initaialize()
         return false;
     }
 
-    /*while (m_totalClients < MAX_CLIENTS)
-    {
-        while (!ListenSocket())
-        {
-            std::cout << "Waiting for clients..." << std::endl;
-        }
-
-        m_totalClients++;
-    }*/
     return true;
 }
 
@@ -56,6 +47,7 @@ bool Connection::OpenSocket()
     }
 
     std::cout << "Socket open for clients." << std::endl;
+    std::cout << "Waiting for clients...";
     return true;
 }
 
@@ -63,35 +55,31 @@ bool Connection::ListenSocket()
 {
     while (m_totalClients < MAX_CLIENTS)
     {
-        //TCPsocket tempSocket = nullptr;
-    
         //when connection made, save it in new socket
         m_clientSocket = SDLNet_TCP_Accept(m_listenSocket);
         
         //if there's no client, pause for a bit then try again
         if (!m_clientSocket)
         {
-            std::cout << "Waiting for clients...";
+            std::cout << ".";
             SDL_Delay(500);
         }
         
+        //otherwise store the connection for later
         else
         {
-            //otherwise store the connection for later
-            //m_clientSocket = tempSocket;
             std::cout << std::endl << "Client connected" << std::endl << std::endl;
             m_totalClients++;
         }
     }
+
     return true;
 }
 
-bool Connection::Send(/*std::string& messageSent*/)
+bool Connection::Send(std::string& messageSent)
 {
-    std::string messageSent;
     std::cout << "Say something: ";
     std::cin >> messageSent;
-    //int length = messageSent.length();
     int length = messageSent.length() + 1;
 
     if (SDLNet_TCP_Send(m_clientSocket, messageSent.c_str(), length) < length)
@@ -111,11 +99,9 @@ bool Connection::Send(/*std::string& messageSent*/)
 
 bool Connection::Receive(std::string& message)
 {
-    //TODO - SDLNet_TCP_Recv, then do the same for client code
-    std::string messageReceived;
-    int length = messageReceived.length() + 1;
-    //SDLNet_TCP_Recv(m_clientSocket, messageReceived.c_str(), length);
-    while (messageReceived != "end")
+    int length = message.length() + 1;
+    SDLNet_TCP_Recv(m_clientSocket, &message, length);
+    while (message != "end")
     {
         return true;
     }

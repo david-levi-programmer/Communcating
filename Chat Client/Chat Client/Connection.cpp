@@ -1,8 +1,5 @@
 #include "Connection.h"
 
-//TCPsocket listenSocket = nullptr;
-//TCPsocket clientSocket = nullptr;
-
 //go into command prompt and type 'ipconfig' to see your address
 //host and port number
 const std::string ipAddress = "localHost";
@@ -47,30 +44,33 @@ bool Connection::OpenSocket()
     std::cout << "Connected to server" << std::endl;
 }
 
-bool Connection::Send(const std::string& message)
+bool Connection::Send(std::string& message)
 {
-    std::string messageSent;
-    std::cin >> messageSent;
-    int length = messageSent.length() + 1;
+    std::cout << "Say something: ";
+    std::cin >> message;
+    int length = message.length() + 1;
 
-    if (SDLNet_TCP_Send(m_socket, messageSent.c_str(), length) < length)
+    if (SDLNet_TCP_Send(m_socket, message.c_str(), length) < length)
     {
         std::cout << "Couldn't send message" << std::endl;
     }
 
     std::cout << "Message sent." << std::endl;
 
-    while (messageSent != "end")
+    while (message != "end")
     {
         return true;
     }
+
+    return false;
 }
 
 bool Connection::Receive(std::string& message)
 {
-    std::string messageReceived;
-    //std::getline >> message >> std::endl;
-    while (messageReceived != "end")
+    int length = message.length() + 1;
+    SDLNet_TCP_Recv(m_socket, &message, length);
+
+    while (message != "end")
     {
         return true;
     }

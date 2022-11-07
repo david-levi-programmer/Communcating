@@ -5,7 +5,7 @@
 
 #pragma once
 
-constexpr int MAX_CLIENTS = 4;
+constexpr int MAX_CLIENTS = 1;
 
 class Connection
 {
@@ -16,7 +16,7 @@ public:
 	bool OpenSocket();
 	bool ListenSocket();
 
-	bool Send(/*std::string& messageSent*/);
+	bool Send(std::string& messageSent);
 	bool Receive(std::string& message);
 
 	void CloseSocket();
@@ -28,8 +28,5 @@ private:
 	TCPsocket m_listenSocket = nullptr;
 	TCPsocket m_clientSocket = nullptr;
 	int m_totalClients;
-
-	//std::string& messageSent;
-	//std::string& messageReceived;
 
 };
