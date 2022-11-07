@@ -82,7 +82,6 @@ bool Connection::ListenSocket()
             std::cout << std::endl << "Client connected" << std::endl << std::endl;
             m_totalClients++;
         }
-
     }
     return true;
 }
@@ -94,6 +93,7 @@ bool Connection::Send(/*std::string& messageSent*/)
     std::cin >> messageSent;
     //int length = messageSent.length();
     int length = messageSent.length() + 1;
+
     if (SDLNet_TCP_Send(m_clientSocket, messageSent.c_str(), length) < length)
     {
         std::cout << "Couldn't send message" << std::endl;
@@ -113,10 +113,13 @@ bool Connection::Receive(std::string& message)
 {
     //TODO - SDLNet_TCP_Recv, then do the same for client code
     std::string messageReceived;
+    int length = messageReceived.length() + 1;
+    //SDLNet_TCP_Recv(m_clientSocket, messageReceived.c_str(), length);
     while (messageReceived != "end")
     {
         return true;
     }
+
     return false;
 }
 

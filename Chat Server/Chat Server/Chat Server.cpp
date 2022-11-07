@@ -17,8 +17,9 @@ int main(int argc, char* argv[])
 {
     server.Initaialize();
     server.OpenSocket();
-    std::thread door(&Connection::ListenSocket, Connection());
-    door.join();
+    server.ListenSocket();
+    /*std::thread door(&Connection::ListenSocket, Connection());
+    door.join();*/
     
     std::thread talk(&Connection::Send, Connection()/*, std::ref(messageSent)*/);
     //std::thread hear(&Connection::Receive, Connection());

@@ -25,8 +25,8 @@ public:
 private:
 
 	IPaddress m_IP;
-	TCPsocket m_listenSocket;
-	TCPsocket m_clientSocket;
+	TCPsocket m_listenSocket = nullptr;
+	TCPsocket m_clientSocket = nullptr;
 	int m_totalClients;
 
 	//std::string& messageSent;
