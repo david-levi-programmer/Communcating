@@ -55,8 +55,7 @@ bool Connection::OpenSocket()
         return false;
     }
 
-    std::cout << "Socket open for clients." << std::endl << std::endl;
-    std::cout << "Waiting for client." << std::endl;
+    std::cout << "Socket open for clients." << std::endl;
     return true;
 }
 
@@ -64,13 +63,13 @@ bool Connection::ListenSocket()
 {
     while (m_totalClients < MAX_CLIENTS)
     {
-        TCPsocket tempSocket = nullptr;
+        //TCPsocket tempSocket = nullptr;
     
         //when connection made, save it in new socket
-        tempSocket = SDLNet_TCP_Accept(m_listenSocket);
+        m_clientSocket = SDLNet_TCP_Accept(m_listenSocket);
         
         //if there's no client, pause for a bit then try again
-        if (!tempSocket)
+        if (!m_clientSocket)
         {
             std::cout << "Waiting for clients...";
             SDL_Delay(500);
@@ -79,7 +78,7 @@ bool Connection::ListenSocket()
         else
         {
             //otherwise store the connection for later
-            m_clientSocket = tempSocket;
+            //m_clientSocket = tempSocket;
             std::cout << std::endl << "Client connected" << std::endl << std::endl;
             m_totalClients++;
         }
@@ -112,6 +111,7 @@ bool Connection::Send(/*std::string& messageSent*/)
 
 bool Connection::Receive(std::string& message)
 {
+    //TODO - SDLNet_TCP_Recv, then do the same for client code
     std::string messageReceived;
     while (messageReceived != "end")
     {
