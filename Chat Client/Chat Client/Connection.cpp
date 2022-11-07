@@ -1,7 +1,7 @@
 #include "Connection.h"
 
-TCPsocket listenSocket = nullptr;
-TCPsocket clientSocket = nullptr;
+//TCPsocket listenSocket = nullptr;
+//TCPsocket clientSocket = nullptr;
 
 //go into command prompt and type 'ipconfig' to see your address
 //host and port number
@@ -52,11 +52,14 @@ bool Connection::Send(const std::string& message)
     std::string messageSent;
     std::cin >> messageSent;
     int length = messageSent.length() + 1;
+
     if (SDLNet_TCP_Send(m_socket, messageSent.c_str(), length) < length)
     {
         std::cout << "Couldn't send message" << std::endl;
     }
+
     std::cout << "Message sent." << std::endl;
+
     while (messageSent != "end")
     {
         return true;
@@ -71,6 +74,7 @@ bool Connection::Receive(std::string& message)
     {
         return true;
     }
+
     return false;
 }
 
