@@ -68,11 +68,17 @@ bool Connection::Send(std::string& message)
 bool Connection::Receive(std::string& message)
 {
     int length = message.length() + 1;
-    SDLNet_TCP_Recv(m_socket, &message, length);
-
-    while (message != "end")
+    if (SDLNet_TCP_Recv(m_socket, &message, length) <= 0)
     {
-        return true;
+        std::cout << "Message not received successfully" << std::endl;
+    }
+    else
+    {
+        while (message != "end")
+        {
+            std::cout << message << std::endl;
+            return true;
+        }
     }
 
     return false;
