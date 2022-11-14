@@ -5,8 +5,6 @@
 #include <SDL_net.h>
 #include "Connection.h"
 
-#define CHAT_PROMPT "/"
-
 Connection client;
 
 std::string messageSent;
@@ -20,7 +18,7 @@ int main(int argc, char* argv[])
     //std::thread talk(&Connection::Send, Connection(), std::ref(messageSent));
     //std::thread hear(&Connection::Receive, Connection(), std::ref(messageReceived));
     client.Send(std::ref(messageSent));
-    //client.Receive(std::ref(messageReceived));
+    client.Receive(std::ref(messageReceived));
 
     system("pause");
     return 0;

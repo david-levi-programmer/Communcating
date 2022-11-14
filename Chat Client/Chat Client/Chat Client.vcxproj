@@ -77,8 +77,8 @@
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <LinkIncremental>false</LinkIncremental>
-    <IncludePath>C:\Users\DAL0531\source\repos\Communcating\Chat Client\SDL\Include;C:\Users\DAL0531\Documents\Visual Studio 2019\Communcating\Chat Client\SDL\include</IncludePath>
-    <LibraryPath>C:\Users\DAL0531\source\repos\Communcating\Chat Client\SDL\lib;C:\Users\DAL0531\Documents\Visual Studio 2019\Communcating\Chat Client\SDL\lib</LibraryPath>
+    <IncludePath>..\SDL\Include;$(IncludePath);</IncludePath>
+    <LibraryPath>..\SDL\lib;$(LibraryPath);</LibraryPath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <LinkIncremental>true</LinkIncremental>

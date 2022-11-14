@@ -101,6 +101,7 @@ bool Connection::Receive(std::string& message)
 {
     int length = message.length() + 1;
     SDLNet_TCP_Recv(m_clientSocket, &message, length);
+    
     while (message != "end")
     {
         return true;

@@ -5,10 +5,6 @@
 #include <SDL_net.h>
 #include "Connection.h"
 
-#define CHAT_PROMPT "/"
-
-#define MAX_SOCKETS 0x10
-
 Connection server;
 
 std::string messageSent;
