@@ -10,6 +10,8 @@ Connection server;
 std::string messageSent;
 std::string messageReceived;
 
+//bool isRunning = true;
+
 int main(int argc, char* argv[])
 {
     server.Initaialize();
@@ -19,11 +21,20 @@ int main(int argc, char* argv[])
     door.join();*/
     
     //TODO - this should be in a loop
-    server.Send(std::ref(messageSent));
     server.Receive(std::ref(messageReceived));
+    server.Send(std::ref(messageSent));
     /*std::thread talk(&Connection::Send, Connection(), std::ref(messageSent));
     talk.detach();*/
     //std::thread hear(&Connection::Receive, Connection(), std::ref(messageReceived));
+    /*if (isRunning)
+    {
+        server.Send(std::ref(messageSent));
+        server.Receive(std::ref(messageReceived));
+    }
+    else
+    {
+        isRunning = false;
+    }*/
     
     system("pause");
     return 0;
