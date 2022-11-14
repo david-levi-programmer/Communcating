@@ -18,6 +18,7 @@ int main(int argc, char* argv[])
     /*std::thread door(&Connection::ListenSocket, Connection());
     door.join();*/
     
+    //TODO - this should be in a loop
     server.Send(std::ref(messageSent));
     server.Receive(std::ref(messageReceived));
     /*std::thread talk(&Connection::Send, Connection(), std::ref(messageSent));

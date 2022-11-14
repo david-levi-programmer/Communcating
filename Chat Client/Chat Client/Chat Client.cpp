@@ -15,10 +15,11 @@ int main(int argc, char* argv[])
     client.Initaialize();
     client.OpenSocket();
 
+    //TODO - this should be in a loop
     //std::thread talk(&Connection::Send, Connection(), std::ref(messageSent));
     //std::thread hear(&Connection::Receive, Connection(), std::ref(messageReceived));
-    client.Send(std::ref(messageSent));
     client.Receive(std::ref(messageReceived));
+    client.Send(std::ref(messageSent));
 
     system("pause");
     return 0;
