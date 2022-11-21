@@ -9,15 +9,13 @@ Connection server;
 std::string messageSent;
 std::string messageReceived;
 
-bool isRunning = true;
-
 int main(int argc, char* argv[])
 {
     server.Initaialize();
     server.OpenSocket();
     server.ListenSocket();
     
-    while (isRunning)
+    while (messageSent != "end" && messageReceived != "end")
     {
         server.Send(std::ref(messageSent));
         server.Receive(std::ref(messageReceived));

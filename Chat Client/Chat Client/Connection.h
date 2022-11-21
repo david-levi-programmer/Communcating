@@ -16,7 +16,7 @@ public:
 	bool Send(std::string& message);
 	bool Receive(std::string& message);
 
-	void CloseSocket();
+	void CloseSocket() {}
 	void ShutDown();
 
 private:

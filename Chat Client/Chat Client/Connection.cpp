@@ -83,12 +83,6 @@ bool Connection::Receive(std::string& message)
     return false;
 }
 
-void Connection::CloseSocket()
-{
-    SDLNet_TCP_Close(m_socket);
-    std::cout << "Connection closed." << std::endl;
-}
-
 void Connection::ShutDown()
 {
     SDLNet_Quit();
