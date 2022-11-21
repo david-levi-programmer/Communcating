@@ -99,8 +99,7 @@ bool Connection::Send(std::string& messageSent)
 
 bool Connection::Receive(std::string& message)
 {
-    int length = message.length() + 1;
-    if (SDLNet_TCP_Recv(m_clientSocket, &message, length) <= 0)
+    if (SDLNet_TCP_Recv(m_clientSocket, &message, 2000) <= 0)
     {
         std::cout << "Message not received successfully" << std::endl;
     }

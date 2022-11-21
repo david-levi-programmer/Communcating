@@ -10,16 +10,16 @@ Connection client;
 std::string messageSent;
 std::string messageReceived;
 
-//bool isRunning = true;
+bool isRunning = true;
 
 int main(int argc, char* argv[])
 {
     client.Initaialize();
     client.OpenSocket();
 
-    //TODO - this should be in a loop
     client.Send(std::ref(messageSent));
     client.Receive(std::ref(messageReceived));
+    
     //std::thread talk(&Connection::Send, Connection(), std::ref(messageSent));
     //std::thread hear(&Connection::Receive, Connection(), std::ref(messageReceived));
     /*if (isRunning)
@@ -31,10 +31,10 @@ int main(int argc, char* argv[])
     {
         isRunning = false;
     }*/
-
-    system("pause");
-    return 0;
     
     client.CloseSocket();
     client.ShutDown();
+
+    system("pause");
+    return 0;
 }

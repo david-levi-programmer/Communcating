@@ -10,7 +10,7 @@ Connection server;
 std::string messageSent;
 std::string messageReceived;
 
-//bool isRunning = true;
+bool isRunning = true;
 
 int main(int argc, char* argv[])
 {
@@ -20,9 +20,9 @@ int main(int argc, char* argv[])
     /*std::thread door(&Connection::ListenSocket, Connection());
     door.join();*/
     
-    //TODO - this should be in a loop
-    server.Receive(std::ref(messageReceived));
     server.Send(std::ref(messageSent));
+    server.Receive(std::ref(messageReceived));
+    
     /*std::thread talk(&Connection::Send, Connection(), std::ref(messageSent));
     talk.detach();*/
     //std::thread hear(&Connection::Receive, Connection(), std::ref(messageReceived));
@@ -35,10 +35,10 @@ int main(int argc, char* argv[])
     {
         isRunning = false;
     }*/
-    
-    system("pause");
-    return 0;
 
     server.CloseSocket();
     server.ShutDown();
+    
+    system("pause");
+    return 0;
 }
