@@ -17,8 +17,8 @@ int main(int argc, char* argv[])
     
     while (messageSent != "end" && messageReceived != "end")
     {
-        server.Send(std::ref(messageSent));
-        server.Receive(std::ref(messageReceived));
+        server.Send(messageSent);
+        server.Receive(messageReceived);
     }
 
     server.CloseSocket();

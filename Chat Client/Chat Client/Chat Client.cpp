@@ -16,8 +16,8 @@ int main(int argc, char* argv[])
 
     while (messageSent != "end" && messageReceived != "end")
     {
-        client.Send(std::ref(messageSent));
-        client.Receive(std::ref(messageReceived));
+        client.Send(messageSent);
+        client.Receive(messageReceived);
     }
 
     client.ShutDown();
